@@ -7,15 +7,21 @@ description: Render Mermaid diagrams to ASCII art or SVG. Use when visualizing f
 
 Render Mermaid text diagrams to ASCII/Unicode or SVG.
 
+## Setup
+
+```bash
+cd scripts && npm install -g .
+```
+
 ## Quick Start
 
 ```bash
 # ASCII output (chat-friendly)
-node scripts/mermaid-render.mjs ascii "graph LR
+mermaid-render ascii "graph LR
 A --> B --> C"
 
 # SVG output
-node scripts/mermaid-render.mjs svg "graph TD
+mermaid-render svg "graph TD
 A --> B" -o diagram.svg
 ```
 
@@ -32,7 +38,7 @@ A --> B" -o diagram.svg
 ## ASCII Mode
 
 ```bash
-node scripts/mermaid-render.mjs ascii "graph LR
+mermaid-render ascii "graph LR
 A[Start] --> B{Decision}
 B -->|Yes| C[Action]
 B -->|No| D[End]"
@@ -58,7 +64,7 @@ Options:
 ## SVG Mode
 
 ```bash
-node scripts/mermaid-render.mjs svg "graph TD
+mermaid-render svg "graph TD
 A --> B" -o output.svg -t tokyo-night
 ```
 
@@ -71,15 +77,15 @@ Options:
 
 ```bash
 # Inline
-node scripts/mermaid-render.mjs ascii "graph LR
+mermaid-render ascii "graph LR
 A --> B"
 
 # From file
-node scripts/mermaid-render.mjs ascii -f diagram.mmd
+mermaid-render ascii -f diagram.mmd
 
 # From stdin
 echo "graph LR
-A --> B" | node scripts/mermaid-render.mjs ascii
+A --> B" | mermaid-render ascii
 ```
 
 ## Common Patterns

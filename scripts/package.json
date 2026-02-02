@@ -1,7 +1,25 @@
 {
-  "name": "beautiful-mermaid-scripts",
+  "name": "beautiful-mermaid-cli",
   "version": "1.0.0",
+  "description": "Render Mermaid diagrams to ASCII or SVG",
   "type": "module",
+  "bin": {
+    "mermaid-render": "./mermaid-render.mjs"
+  },
+  "files": [
+    "mermaid-render.mjs"
+  ],
+  "keywords": [
+    "mermaid",
+    "diagram",
+    "ascii",
+    "svg",
+    "cli",
+    "flowchart",
+    "sequence-diagram"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "beautiful-mermaid": "^0.1.10"
   }
